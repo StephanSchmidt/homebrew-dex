@@ -5,21 +5,21 @@
 class Dex < Formula
   desc "CLI tool for manipulating slide presentations"
   homepage "https://github.com/StephanSchmidt/dex"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/StephanSchmidt/dex/releases/download/v0.1.0/dex_darwin_amd64.tar.gz"
-      sha256 "003cfcee9a24bafa5804b84054965a2ef2a7f566e19e1a9a97c3711d1906353c"
+      url "https://github.com/StephanSchmidt/dex/releases/download/v0.2.0/dex_darwin_amd64.tar.gz"
+      sha256 "efd4dc2db166026dc768e70de966deb515975c2b39e896ffcbd25677350d2cf7"
 
       def install
         bin.install "dex"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/StephanSchmidt/dex/releases/download/v0.1.0/dex_darwin_arm64.tar.gz"
-      sha256 "0d2e26aa74598c973102c686ad2f349f619c6c60df64651b4b88bceafbcdd83b"
+      url "https://github.com/StephanSchmidt/dex/releases/download/v0.2.0/dex_darwin_arm64.tar.gz"
+      sha256 "310cab8fb1468236e05f8968b9c2b1a934818d4846f35df6bb4061ac8207ebf3"
 
       def install
         bin.install "dex"
@@ -29,15 +29,15 @@ class Dex < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/StephanSchmidt/dex/releases/download/v0.1.0/dex_linux_amd64.tar.gz"
-      sha256 "1897764356d709eda2055ddecf94014fabe7b472989e1c635507f8b7f2fc5488"
+      url "https://github.com/StephanSchmidt/dex/releases/download/v0.2.0/dex_linux_amd64.tar.gz"
+      sha256 "bd373f9e1c719b8a882c9bab8eeb185b76025f8fe705c470958cc7a1ba3ca8b2"
       def install
         bin.install "dex"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/StephanSchmidt/dex/releases/download/v0.1.0/dex_linux_arm64.tar.gz"
-      sha256 "d9bf5b70cac2a46a6195252c4583d0e71ca9d50832888eb99eafd6adb065b324"
+      url "https://github.com/StephanSchmidt/dex/releases/download/v0.2.0/dex_linux_arm64.tar.gz"
+      sha256 "f53a0897c6997e068b30d598f1c88c46017239a96354eb6aaec4a8987d5085d9"
       def install
         bin.install "dex"
       end

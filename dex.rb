@@ -5,23 +5,23 @@
 class Dex < Formula
   desc "CLI tool for manipulating slide presentations"
   homepage "https://github.com/StephanSchmidt/dex"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/StephanSchmidt/dex/releases/download/v0.2.0/dex_darwin_amd64.tar.gz"
-      sha256 "efd4dc2db166026dc768e70de966deb515975c2b39e896ffcbd25677350d2cf7"
+      url "https://github.com/StephanSchmidt/dex/releases/download/v0.3.0/dex_darwin_amd64.tar.gz"
+      sha256 "9aacb9bd6dc60152e7d4fb5f6a912c7aa33c0bed76e8d33821a0af05a6c94067"
 
-      def install
+      define_method(:install) do
         bin.install "dex"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/StephanSchmidt/dex/releases/download/v0.2.0/dex_darwin_arm64.tar.gz"
-      sha256 "310cab8fb1468236e05f8968b9c2b1a934818d4846f35df6bb4061ac8207ebf3"
+      url "https://github.com/StephanSchmidt/dex/releases/download/v0.3.0/dex_darwin_arm64.tar.gz"
+      sha256 "f06ee1d322a738baa7d2ffcd3ccfda34546a6006eede3df6de16dde6d52fb612"
 
-      def install
+      define_method(:install) do
         bin.install "dex"
       end
     end
@@ -29,16 +29,16 @@ class Dex < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/StephanSchmidt/dex/releases/download/v0.2.0/dex_linux_amd64.tar.gz"
-      sha256 "bd373f9e1c719b8a882c9bab8eeb185b76025f8fe705c470958cc7a1ba3ca8b2"
-      def install
+      url "https://github.com/StephanSchmidt/dex/releases/download/v0.3.0/dex_linux_amd64.tar.gz"
+      sha256 "915d8f821bb8c446d9846990afa38b4fbeb45ec3eda2de99a7325ee890c42d3c"
+      define_method(:install) do
         bin.install "dex"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/StephanSchmidt/dex/releases/download/v0.2.0/dex_linux_arm64.tar.gz"
-      sha256 "f53a0897c6997e068b30d598f1c88c46017239a96354eb6aaec4a8987d5085d9"
-      def install
+      url "https://github.com/StephanSchmidt/dex/releases/download/v0.3.0/dex_linux_arm64.tar.gz"
+      sha256 "9d1fc216473ddf096f372a3909b910eafaa4328691f3643d085fcc51ddb6d858"
+      define_method(:install) do
         bin.install "dex"
       end
     end
